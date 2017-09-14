@@ -1,6 +1,6 @@
 
-var getResume = function() {
-  window.open("https://utexas.box.com/v/shiva-resume", "_target");
+var openLink = function(link) {
+  window.open(link, "_target");
 }
 
 var isMobile = function() {
@@ -38,7 +38,7 @@ angular.module('app')
   $scope.navLinks = ["#about", "#resume", "#projects"];
 
   $scope.init = function() {
-    $timeout($scope.about);
+    $timeout($scope.projects);
   }
 
   //NAVIGATOR
@@ -59,7 +59,7 @@ angular.module('app')
 
     $scope.showChosen = function(type) {
       angular.forEach($scope.navLinks, function(link, idx){
-        angular.element(document.querySelector(link)).attr("style", "text-decoration: "+(idx == type ? "underline" : "none"));
+        angular.element(document.querySelector(link)).attr("style", "color: black; text-decoration: "+(idx == type ? "underline" : "none"));
       });
     }
 
@@ -75,6 +75,55 @@ angular.module('app')
     $scope.phone = function() {
       notify("337 - 378 - 2028");
     }
+})
+
+.controller("Projects", function($scope){
+  $scope.projects = [
+    {
+      name: "UT Mail System Automator",
+      desc: "Improves inefficient mail system, created after working with UT Housing as an RA and seeing opportunity for growth",
+      details: [],
+      languages: ["AngularJS", "SeleniumJS"],
+      img: null,
+      link: null
+    },{
+      name: "Wellness Mind Map",
+      desc: "Creatively visualizes digital journal data in interactive wellbeing app for self-evaluation and progress assessment",
+      details: [],
+      languages: ["Python", "D3.js", "AngularJS"],
+      img: "html/images/mind_map.png",
+      link: "https://bit.ly/ShivaMindMap"
+    },{
+      name: "Interactive Degree Audit",
+      desc: "Removes tedium of verifying on-time graduation in a more robust manner than alternatives",
+      details: [],
+      languages: ["AngularJS"],
+      img: null,
+      link: "https://bit.ly/ShivaDegree"
+    },{
+      name: "Carpe Diem Scheduling",
+      desc: "Manages calendars using basic systems design principles for effective time management to 'seize the day'",
+      details: [],
+      languages: ["AngularJS", "SQL"],
+      img: null,
+      link: null
+    },{
+      name: "Satya Steganography",
+      desc: "Hides images in plain sight (i.e., steganography) to protect sensitive data",
+      details: [],
+      languages: ["Python"],
+      img: null,
+      link: null
+    }
+  ];
+
+  $scope.init = function() {
+    //
+  }
+
+  $scope.openLink = function(link) {
+    openLink(link);
+  }
 })
 
 ;

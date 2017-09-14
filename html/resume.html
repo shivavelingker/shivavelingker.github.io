@@ -2,13 +2,14 @@
 
 	<ons-row style="text-align: center; padding: 1%;">
 		<ons-col>
-			<ons-button onclick="getResume()" modifier="bBlue">
-				View Resume
+			<ons-button onclick="openLink('https://utexas.box.com/v/shiva-resume')" modifier="bBlue">
+				<ons-icon icon="ion-android-download"></ons-icon>
+				Download Resume
 			</ons-button>
 		</ons-col>
 	</ons-row>
 
-	<div class="section group">
+	<div ng-if="false" class="section group">
 		<div class="col span_1_of_3" style="width: 25%;">
 			<h2> Education </h2>
 		</div>

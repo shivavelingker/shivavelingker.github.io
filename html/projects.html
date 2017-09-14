@@ -1,7 +1,36 @@
-<ons-page>
+<ons-page ng-controller="Projects" ng-init="init()">
 	<ons-toolbar>
 		<div class="center">
-			Projects
+			<h1 style="margin: 0px;">Personal Projects</h1>
 		</div>
 	</ons-toolbar>
+
+	<ons-card ng-repeat="project in projects">
+		<div class="title">
+			{{ project.name }}
+			<ons-icon
+				icon="ion-link"
+				ng-if="project.link"
+				ng-click="openLink(project.link)"
+				style="color: blue;">
+			</ons-icon>
+		</div>
+		<div class="content">
+			<ons-row>
+				<ons-col>
+					{{ project.desc }}
+				</ons-col>
+				<ons-col style="max-width: 30%; text-align: right;">
+					<span
+						ng-repeat="lang in project.languages"
+						class="badge">
+						{{ lang }}
+					</span>
+				</ons-col>
+			<img
+				ng-if="project.img"
+				src="{{ project.img }}"
+				width="100%;" />
+		</div>
+	</ons-card>
 </ons-page>
