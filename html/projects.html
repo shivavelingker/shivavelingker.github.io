@@ -57,7 +57,7 @@
 						<ons-col style="max-width: 30%; text-align: right;">
 							<span
 								ng-repeat="lang in project.languages"
-								class="badge">
+								class="label label-as-badge {{ getColor(lang) }}">
 								{{ lang }}
 							</span>
 						</ons-col>
@@ -67,7 +67,7 @@
 							<img
 								ng-if="project.img"
 								src="{{ project.img }}"
-								style="margin: 3px; max-width: 100%; height: auto;"/>
+								style="margin: 5px; max-width: 100%; height: auto; border: 1px solid; border-radius: 1em; border-color: gray;"/>
 						</ons-col>
 					</ons-row>
 					<ons-row>
@@ -103,7 +103,7 @@
 						<ons-col style="max-width: 30%; text-align: right;">
 							<span
 								ng-repeat="lang in project.languages"
-								class="badge">
+								class="label label-as-badge {{ getColor(lang) }}">
 								{{ lang }}
 							</span>
 						</ons-col>
@@ -113,7 +113,7 @@
 							<img
 								ng-if="project.img"
 								src="{{ project.img }}"
-								style="margin: 3px; max-width: 100%; height: auto;"/>
+								style="margin: 5px; max-width: 100%; height: auto; border: 1px solid; border-radius: 1em; border-color: gray;"/>
 						</ons-col>
 					</ons-row>
 					<ons-row>

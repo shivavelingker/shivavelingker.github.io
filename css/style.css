@@ -26,6 +26,12 @@
   text-align: center;
 }
 
+.label-as-badge{
+  border-radius: 1em !important;
+  white-space: normal !important;
+  margin: 1px;
+}
+
 .content{
   font-family: "Open Sans", sans-serif;
 }

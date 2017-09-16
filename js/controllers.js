@@ -1,6 +1,7 @@
 var url = "https://dl.dropbox.com/s/gtjkjehn28dsfoz/portfolio.json?dl=1";
 var data = null;
 
+//Get all content externally from Dropbox
 var getData = function() {
   var xhr = new XMLHttpRequest();
 
@@ -12,10 +13,6 @@ var getData = function() {
   xhr.send();
 }
 getData();
-
-var openLink = function(link) {
-  window.open(link, "_target");
-}
 
 var isMobile = function() {
   var OP = ons.platform;
@@ -43,6 +40,10 @@ var notify = function(msg) {
 
   //Set focus on button to allow easy cancellation
   setTimeout(function() { document.querySelector('.alert-dialog-button').focus(); });
+}
+
+var openLink = function(link) {
+  window.open(link, "_target");
 }
 
 angular.module('app')
@@ -110,8 +111,10 @@ angular.module('app')
   $scope.intro_quote2 = data.projectIntroQuote2;
   $scope.projects = data.projects;
 
-  $scope.init = function() {
-    console.log(data);
+  $scope.init = function() {}
+
+  $scope.getColor = function(language) {
+    return data.languages[language];
   }
 
   $scope.openLink = function(link) {
