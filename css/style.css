@@ -8,6 +8,18 @@
   margin-bottom: 0px;
 }
 
+.reveal{
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+}
+
+.revealBtn{
+  display: block;
+  margin-top: 50px;
+}
+
 .handwriting > .large{
   font-family: "Love Ya Like A Sister", cursive;
   font-size: x-large;

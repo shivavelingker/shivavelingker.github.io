@@ -1,6 +1,10 @@
 var url = "https://dl.dropbox.com/s/gtjkjehn28dsfoz/portfolio.json?dl=1";
 var data = null;
 
+var prefs = {
+  projects: 0
+};
+
 //Get all content externally from Dropbox
 var getData = function() {
   var xhr = new XMLHttpRequest();
@@ -111,7 +115,23 @@ angular.module('app')
   $scope.intro_quote2 = data.projectIntroQuote2;
   $scope.projects = data.projects;
 
-  $scope.init = function() {}
+  $scope.init = function() {
+    if(prefs.projects)
+      $scope.reveal();
+    else
+      prefs.projects ^= 1;
+  }
+
+  $scope.close = function() {
+    document.querySelector('#menu').style.display = "block";
+    imgModal.hide();
+  }
+
+  $scope.feature = function(img) {
+    $scope.featuredImg = img;
+    document.querySelector('#menu').style.display = "none";
+    imgModal.show();
+  }
 
   $scope.getColor = function(language) {
     return data.languages[language];
@@ -119,6 +139,13 @@ angular.module('app')
 
   $scope.openLink = function(link) {
     openLink(link);
+  }
+
+  $scope.reveal = function() {
+    angular.forEach(document.querySelectorAll('.reveal'), function(obj){
+      obj.style.opacity = 1;
+    });
+    angular.element(document.querySelector('.revealBtn')).attr("style", "display: none;");
   }
 })
 
