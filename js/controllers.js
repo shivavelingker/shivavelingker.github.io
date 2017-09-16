@@ -81,6 +81,7 @@ angular.module('app')
   $scope.projects = [
     {
       name: "UT Mail System Automator",
+      type: 0,
       desc: "Improves inefficient mail system, created after working with UT Housing as an RA and seeing opportunity for growth",
       details: [],
       languages: ["AngularJS", "SeleniumJS"],
@@ -88,20 +89,23 @@ angular.module('app')
       link: null
     },{
       name: "Wellness Mind Map",
-      desc: "Creatively visualizes digital journal data in interactive wellbeing app for self-evaluation and progress assessment",
-      details: [],
+      type: 1,
+      desc: "Creatively visualize digital journal data in interactive app to see how I'm progressing pragmatically",
+      details: ["I wanted to replace a stagnant self-perception with a radically more accurate image", "Based on provable quantified data instead of conventional \"feel-good\" positive psychology", "Tracks the themes in my life and their interactions with each other"],
       languages: ["Python", "D3.js", "AngularJS"],
       img: "html/images/mind_map.png",
       link: "https://bit.ly/ShivaMindMap"
     },{
       name: "Interactive Degree Audit",
-      desc: "Removes tedium of verifying on-time graduation in a more robust manner than alternatives",
+      type: 0,
+      desc: "Remove the tedium of verifying on-time graduation in a more robust manner than alternatives",
       details: [],
       languages: ["AngularJS"],
       img: null,
       link: "https://bit.ly/ShivaDegree"
     },{
       name: "Carpe Diem Scheduling",
+      type: 0,
       desc: "Manages calendars using basic systems design principles for effective time management to 'seize the day'",
       details: [],
       languages: ["AngularJS", "SQL"],
@@ -109,6 +113,7 @@ angular.module('app')
       link: null
     },{
       name: "Satya Steganography",
+      type: 1,
       desc: "Hides images in plain sight (i.e., steganography) to protect sensitive data",
       details: [],
       languages: ["Python"],

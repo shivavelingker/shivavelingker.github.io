@@ -1,22 +1,39 @@
 /*****************
- *** Custom CSS ***
+ *** Custom CSS **
  *****************/
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,latin-ext);
+.header{
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 3px;
+  margin-bottom: 0px;
+}
+
+.handwriting > .large{
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: x-large;
+  text-align: center;
+}
+
+.handwriting .regular{
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: large;
+  text-align: center;
+}
+
+.theme{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: x-large;
+  text-align: center;
+}
+
+.content{
+  font-family: "Open Sans", sans-serif;
+}
 
 @media only screen and (max-width: 480px) {
   #menu{
     width: 100%;
   }
-}
-
-.light{
-  font-family: 'Raleway', sans-serif;
-}
-
-.readme{
-  font-family: 'Open Sans', Arial, sans-serif;
-  margin: 50px;
 }
 
 ons-input[type=text] {
@@ -125,125 +142,6 @@ ons-splitter-side[side="left"] {
 
 .small{
   font-size: 12px;
-}
-
-/********************
- * Radial Tree CSS  *
- ********************/
-
-#tagInput {
-  position: fixed;
-  display: none;
-  top: 50px;
-  left: 5px;
-  max-width: 25%;
-  filter: alpha(opacity=100);
-}
-
-.node circle {
-  fill: #fff;
-  stroke: steelblue;
-  stroke-width: 1.5px;
-}
-
-.node {
-  font: 16px sans-serif;
-}
-
-.link {
-  fill: none;
-  stroke: #ccc;
-  stroke-width: 1.5px;
-}
-
-/********************
- *** ChordMap CSS ***
- ********************/
-
-#tooltip {
-  background-color: white;
-  pointer-events: none;
-  font-size: 12px;
-  z-index: 1000;
-  color: gray;
-  position: fixed;
-  width: 450px;
-  border-radius: 6px;
-  opacity: 0;
-  top: 20%;
-  left: 3%;
-  box-shadow: 5px 5px 2.5px #666;
-  text-align: left;
-}
-
-#tooltipTour {
-  background-color: white;
-  pointer-events: none;
-  font-size: 12px;
-  z-index: 1000;
-  color: gray;
-  position: fixed;
-  width: 450px;
-  border-radius: 6px;
-  bottom: 0%;
-  right: 3%;
-  box-shadow: 5px 5px 2.5px #666;
-  text-align: left;
-}
-
-.button--chip {
-  display: inline-block;
-  padding: 0px 5px;
-  font-size: 12px;
-  border-radius: 25px;
-  margin-right: 5px;
-}
-
-.chip img {
-  float: left;
-  margin: 0 10px 0 -25px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-}
-
-#controlBtn{
-  position: absolute;
-  top: 20px;
-  right: 15px;
-  text-align: center;
-  min-width: 100px;
-}
-
-.progressBar{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-}
-
-.explanation{
-  font-size: 14px;
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
-}
-
-.titles{
-  font-size: 16px;
-}
-
-/********************
- * Cluster CSS      *
- ********************/
-
-#popover {
-  position: fixed;
-  display: none;
-  top: 50px;
-  left: 5px;
-  filter: alpha(opacity=100);
-  font-family: "Arial";
-  font-weight: normal;
 }
 
 /********************

@@ -1,36 +1,132 @@
 <ons-page ng-controller="Projects" ng-init="init()">
 	<ons-toolbar>
 		<div class="center">
-			<h1 style="margin: 0px;">Personal Projects</h1>
+			<h1 class="header">Personal Projects</h1>
 		</div>
 	</ons-toolbar>
 
-	<ons-card ng-repeat="project in projects">
-		<div class="title">
-			{{ project.name }}
-			<ons-icon
-				icon="ion-link"
-				ng-if="project.link"
-				ng-click="openLink(project.link)"
-				style="color: blue;">
-			</ons-icon>
-		</div>
-		<div class="content">
-			<ons-row>
-				<ons-col>
-					{{ project.desc }}
-				</ons-col>
-				<ons-col style="max-width: 30%; text-align: right;">
-					<span
-						ng-repeat="lang in project.languages"
-						class="badge">
-						{{ lang }}
-					</span>
-				</ons-col>
-			<img
-				ng-if="project.img"
-				src="{{ project.img }}"
-				width="100%;" />
-		</div>
-	</ons-card>
+	<!-- Intro Quote -->
+	<ons-row class="handwriting">
+		<ons-col class="large" style="margin-top: 15px;">
+			<div>
+				I dream up ideas that I would actually want to use.
+			</div>
+			<div style="color: white; background-color: black;">
+				Then I build them.
+			</div>
+		</ons-col>
+	</ons-row>
+
+	<!-- Lesser Quote -->
+	<ons-row class="handwriting">
+		<ons-col class="regular" style="margin: 10px;">
+			The projects I work on fall into two main themes:
+		</ons-col>
+	</ons-row>
+
+	<!-- Project Headers -->
+	<ons-row>
+		<ons-col class="theme">
+			Efficiency
+		</ons-col>
+		<ons-col class="theme">
+			Creativity
+		</ons-col>
+	</ons-row>
+
+	<!-- Projects -->
+	<ons-row>
+		<ons-col>
+			<ons-card
+				ng-repeat="project in projects"
+				ng-if="project.type == 0">
+				<div class="title">
+					{{ project.name }}
+					<ons-icon
+						icon="ion-link"
+						ng-if="project.link"
+						ng-click="openLink(project.link)"
+						style="color: blue;">
+					</ons-icon>
+				</div>
+				<div class="content">
+					<ons-row>
+						<ons-col>
+							{{ project.desc }}
+						</ons-col>
+						<ons-col style="max-width: 30%; text-align: right;">
+							<span
+								ng-repeat="lang in project.languages"
+								class="badge">
+								{{ lang }}
+							</span>
+						</ons-col>
+					</ons-row>
+					<ons-row style="max-height: 50%;">
+						<ons-col>
+							<img
+								ng-if="project.img"
+								src="{{ project.img }}"
+								style="max-width: 100%; height: auto;"/>
+						</ons-col>
+					</ons-row>
+					<ons-row>
+						<ons-col>
+							<ul style="margin-top: 5px;">
+								<li ng-repeat="desc in project.details">
+									{{ desc }}
+								</li>
+							</ul>
+						</ons-col>
+					</ons-row>
+				</div>
+			</ons-card>
+		</ons-col>
+		<ons-col style="border-left: 1px dashed;">
+			<ons-card
+				ng-repeat="project in projects"
+				ng-if="project.type == 1">
+				<div class="title">
+					{{ project.name }}
+					<ons-icon
+						icon="ion-link"
+						ng-if="project.link"
+						ng-click="openLink(project.link)"
+						style="color: blue;">
+					</ons-icon>
+				</div>
+				<div class="content">
+					<ons-row>
+						<ons-col>
+							{{ project.desc }}
+						</ons-col>
+						<ons-col style="max-width: 30%; text-align: right;">
+							<span
+								ng-repeat="lang in project.languages"
+								class="badge">
+								{{ lang }}
+							</span>
+						</ons-col>
+					</ons-row>
+					<ons-row style="max-height: 50%;">
+						<ons-col>
+							<img
+								ng-if="project.img"
+								src="{{ project.img }}"
+								style="max-width: 100%; height: auto;"/>
+						</ons-col>
+					</ons-row>
+					<ons-row>
+						<ons-col>
+							<ul style="margin-top: 5px;">
+								<li ng-repeat="desc in project.details">
+									{{ desc }}
+								</li>
+							</ul>
+						</ons-col>
+					</ons-row>
+				</div>
+			</ons-card>
+		</ons-col>
+	</ons-row>
 </ons-page>

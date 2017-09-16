@@ -25,12 +25,13 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/col.css">
 	<link rel="stylesheet" href="css/3cols.css">
-	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600|Poiret+One|Raleway:300|Roboto|Oswald:400,300,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600|Love+Ya+Like+A+Sister|Open+Sans:300|Poiret+One" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body ng-app="app">
 
-	<ons-splitter var="menu">
+	<ons-splitter var="menu"
+			style="overflow-y: hidden;">
 		<ons-splitter-side
 			id="menu"
 			ng-controller="Menu"
@@ -41,7 +42,7 @@
 				<!-- Name -->
 				<ons-row
 					class="menu-title"
-					style="height: 15%; max-height: 25%;">
+					style="height: 15%; max-height: 20%;">
 					<ons-col
 						style="padding-left: 5%;"
 						vertical-align="bottom">
@@ -52,7 +53,7 @@
 
 				<!-- Navigator -->
 				<ons-row
-					style="padding: 10px; text-align: center;">
+					style="max-height: 5%; padding: 10px; text-align: center;">
 					<ons-col
 						style="padding-left: 5%;"
 						vertical-align="bottom">
@@ -70,7 +71,7 @@
 
 				<!-- Quote -->
 				<ons-row
-					style="height: 25%; padding: 10px;">
+					style="min-height: 25%; max-height: 30%; padding: 10px;">
 					<ons-col
 						class="quote"
 						vertical-align="middle">
@@ -89,7 +90,7 @@
 				</ons-row>
 
 				<!-- Contact -->
-				<ons-row style="height: 15%;">
+				<ons-row style="min-height: 10%;">
 					<!-- GitHub -->
 					<ons-col
 						style="text-align: center;"
