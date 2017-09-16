@@ -9,10 +9,10 @@
 	<ons-row class="handwriting">
 		<ons-col class="large" style="margin-top: 15px;">
 			<div>
-				I dream up ideas that I would actually want to use.
+				{{ intro_quote1 }}
 			</div>
 			<div style="color: white; background-color: black;">
-				Then I build them.
+				{{ intro_quote2 }}
 			</div>
 		</ons-col>
 	</ons-row>
@@ -35,7 +35,7 @@
 	</ons-row>
 
 	<!-- Projects -->
-	<ons-row>
+	<ons-row style="margin-bottom: 15px;">
 		<ons-col>
 			<ons-card
 				ng-repeat="project in projects"
@@ -67,7 +67,7 @@
 							<img
 								ng-if="project.img"
 								src="{{ project.img }}"
-								style="max-width: 100%; height: auto;"/>
+								style="margin: 3px; max-width: 100%; height: auto;"/>
 						</ons-col>
 					</ons-row>
 					<ons-row>
@@ -113,7 +113,7 @@
 							<img
 								ng-if="project.img"
 								src="{{ project.img }}"
-								style="max-width: 100%; height: auto;"/>
+								style="margin: 3px; max-width: 100%; height: auto;"/>
 						</ons-col>
 					</ons-row>
 					<ons-row>

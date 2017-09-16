@@ -1,8 +1,7 @@
-<ons-page>
-
+<ons-page ng-controller="Resume" ng-init="init()">
 	<ons-row style="text-align: center; padding: 1%;">
 		<ons-col>
-			<ons-button onclick="openLink('https://utexas.box.com/v/shiva-resume')" modifier="bBlue">
+			<ons-button ng-click="getResume()" modifier="bBlue">
 				<ons-icon icon="ion-android-download"></ons-icon>
 				Download Resume
 			</ons-button>
