@@ -54,10 +54,11 @@
 						<ons-col>
 							{{ project.desc }}
 						</ons-col>
-						<ons-col style="max-width: 30%; text-align: right;">
+						<ons-col style="max-width: 30%; text-align: right;" vertical-align="center">
 							<span
 								ng-repeat="lang in project.languages"
-								class="label label-as-badge {{ getColor(lang) }}">
+								class="label label-as-badge"
+								style="background-color: {{ getColor(lang) }};">
 								{{ lang }}
 							</span>
 						</ons-col>
@@ -73,7 +74,7 @@
 					<ons-row>
 						<ons-col>
 							<ul style="margin-top: 5px;">
-								<li ng-repeat="desc in project.details">
+								<li ng-repeat="desc in project.details" ng-bind-html="desc | unsafe">
 									{{ desc }}
 								</li>
 							</ul>
@@ -100,10 +101,11 @@
 						<ons-col>
 							{{ project.desc }}
 						</ons-col>
-						<ons-col style="max-width: 30%; text-align: right;">
+						<ons-col style="max-width: 30%; text-align: right;" vertical-align="center">
 							<span
 								ng-repeat="lang in project.languages"
-								class="label label-as-badge {{ getColor(lang) }}">
+								class="label label-as-badge"
+								style="background-color: {{ getColor(lang) }};">
 								{{ lang }}
 							</span>
 						</ons-col>
@@ -119,7 +121,7 @@
 					<ons-row>
 						<ons-col>
 							<ul style="margin-top: 5px;">
-								<li ng-repeat="desc in project.details">
+								<li ng-repeat="desc in project.details" ng-bind-html="desc | unsafe">
 									{{ desc }}
 								</li>
 							</ul>
