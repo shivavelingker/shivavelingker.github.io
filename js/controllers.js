@@ -128,9 +128,16 @@ angular.module('app')
   }
 
   $scope.feature = function(img) {
-    $scope.featuredImg = img;
     document.querySelector('#menu').style.display = "none";
+
+    $scope.featuredImg = img;
     imgModal.show();
+
+    var image = document.querySelector('#featuredImg');
+    image.onload = function(){
+      image.style.maxHeight = window.innerHeight+"px";
+      image.style.maxWidth = window.innerWidth+"px";
+    }
   }
 
   $scope.getColor = function(language) {

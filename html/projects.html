@@ -144,17 +144,18 @@
 	</ons-row>
 
 	<!-- Image Modal -->
-	<ons-modal var="imgModal">
-		<ons-row style="text-align: right;">
-			<ons-col>
-				<ons-button ng-click="close()" modifier="quiet">
-				X
-				</ons-button>
-			</ons-col>
-		</ons-row>
+	<ons-modal var="imgModal" ng-click="close()">
+		<ons-button
+			ng-click="close()"
+			style="position: fixed; top: 10px; right: 10px;"
+			modifier="quiet">
+			X
+		</ons-button>
 		<ons-row>
 			<ons-col>
-				<img src="{{ featuredImg }}" style="margin: auto; max-width: 80%; max-height: 80%;"/>
+				<img
+					id="featuredImg"
+					src="{{ featuredImg }}"/>
 			</ons-col>
 		</ons-row>
 	</ons-modal>
