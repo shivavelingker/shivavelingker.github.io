@@ -68,7 +68,9 @@
 						<ons-col>
 							{{ project.desc }}
 						</ons-col>
-						<ons-col style="max-width: 30%; text-align: right;" vertical-align="center">
+						<ons-col
+							style="max-width: 30%; text-align: right;"
+							vertical-align="center">
 							<span
 								ng-repeat="lang in project.languages"
 								class="label label-as-badge"
@@ -150,8 +152,8 @@
 		</ons-col>
 	</ons-row>
 
-	<!-- Creativity: if mobile view -->
-	<ons-row>
+	<!-- Mobile view: Creativity and projects -->
+	<ons-row class="reveal">
 		<ons-col
 			ng-if="isMobile()"
 			class="theme"
@@ -159,7 +161,7 @@
 			Creativity
 		</ons-col>
 	</ons-row>
-	<ons-row>
+	<ons-row class="reveal">
 		<ons-col ng-if="isMobile()">
 			<ons-card
 				ng-repeat="project in projects"
@@ -209,7 +211,6 @@
 			</ons-card>
 		</ons-col>
 	</ons-row>
-
 
 	<!-- Image Modal -->
 	<ons-modal var="imgModal" ng-click="close()">
