@@ -31,7 +31,7 @@
 <body ng-app="app">
 
 	<ons-splitter var="menu"
-			style="overflow-y: hidden;">
+			style="overflow-y: hidden; display: flex; flex-flow: column;">
 		<ons-splitter-side
 			id="menu"
 			ng-controller="Menu"
@@ -145,7 +145,7 @@
 
 				<!-- Navigator -->
 				<ons-row
-					style="max-height: 25px; padding: 10px; text-align: center;">
+					style="max-height: 25px; margin-bottom: 5px; text-align: center;">
 					<ons-col
 						style="padding-left: 5%;"
 						vertical-align="bottom">
