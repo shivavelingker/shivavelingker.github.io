@@ -53,6 +53,7 @@ var openLink = function(link) {
 angular.module('app')
 
 .controller("Menu", function($scope, $timeout){
+  $scope.isMobile = isMobile;
   $scope.navLinks = ["#about", "#resume", "#projects"];
 
   $scope.init = function() {
@@ -103,6 +104,8 @@ angular.module('app')
 })
 
 .controller("Resume", function($scope){
+  $scope.isMobile = isMobile;
+
   $scope.init = function() {}
 
   $scope.getResume = function() {
@@ -111,6 +114,8 @@ angular.module('app')
 })
 
 .controller("Projects", function($scope){
+  $scope.isMobile = isMobile;
+
   $scope.intro_quote1 = data.projectIntroQuote1;
   $scope.intro_quote2 = data.projectIntroQuote2;
   $scope.projects = data.projects;
@@ -118,8 +123,6 @@ angular.module('app')
   $scope.init = function() {
     if(prefs.projects)
       $scope.reveal();
-    else
-      prefs.projects ^= 1;
   }
 
   $scope.close = function() {
@@ -149,6 +152,7 @@ angular.module('app')
   }
 
   $scope.reveal = function() {
+    prefs.projects = 1;
     angular.forEach(document.querySelectorAll('.reveal'), function(obj){
       obj.style.opacity = 1;
     });

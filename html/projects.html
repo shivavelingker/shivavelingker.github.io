@@ -41,6 +41,7 @@
 			Efficiency
 		</ons-col>
 		<ons-col
+			ng-if="!isMobile()"
 			class="theme"
 			style="color: white; background-color: black; border-left: 1px solid; border-color: white;">
 			Creativity
@@ -97,7 +98,9 @@
 				</div>
 			</ons-card>
 		</ons-col>
-		<ons-col style="border-left: 1px dashed;">
+		<ons-col
+			ng-if="!isMobile()"
+			style="border-left: 1px dashed;">
 			<ons-card
 				ng-repeat="project in projects"
 				ng-if="project.type == 1">
@@ -146,6 +149,67 @@
 			</ons-card>
 		</ons-col>
 	</ons-row>
+
+	<!-- Creativity: if mobile view -->
+	<ons-row>
+		<ons-col
+			ng-if="isMobile()"
+			class="theme"
+			style="color: white; background-color: black; border-left: 1px solid; border-color: white;">
+			Creativity
+		</ons-col>
+	</ons-row>
+	<ons-row>
+		<ons-col ng-if="isMobile()">
+			<ons-card
+				ng-repeat="project in projects"
+				ng-if="project.type == 1">
+				<div class="title">
+					{{ project.name }}
+					<ons-icon
+						icon="ion-link"
+						ng-if="project.link"
+						ng-click="openLink(project.link)"
+						style="color: blue;">
+					</ons-icon>
+				</div>
+				<div class="content">
+					<ons-row>
+						<ons-col>
+							{{ project.desc }}
+						</ons-col>
+						<ons-col style="max-width: 30%; text-align: right;" vertical-align="center">
+							<span
+								ng-repeat="lang in project.languages"
+								class="label label-as-badge"
+								style="background-color: {{ getColor(lang) }};">
+								{{ lang }}
+							</span>
+						</ons-col>
+					</ons-row>
+					<ons-row style="max-height: 50%;">
+						<ons-col>
+							<img
+								ng-if="project.img"
+								ng-click="feature(project.img)"
+								src="{{ project.img }}"
+								style="margin: 5px; max-width: 100%; height: auto; border: 1px solid; border-radius: 1em; border-color: gray;"/>
+						</ons-col>
+					</ons-row>
+					<ons-row>
+						<ons-col>
+							<ul style="margin-top: 5px;">
+								<li ng-repeat="desc in project.details" ng-bind-html="desc | unsafe">
+									{{ desc }}
+								</li>
+							</ul>
+						</ons-col>
+					</ons-row>
+				</div>
+			</ons-card>
+		</ons-col>
+	</ons-row>
+
 
 	<!-- Image Modal -->
 	<ons-modal var="imgModal" ng-click="close()">

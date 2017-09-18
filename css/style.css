@@ -2,6 +2,29 @@
  *** Custom CSS **
  *****************/
 
+@media (max-width: 768px){
+  #menu{
+    position: relative;
+    top: 0px;
+    width: 100% !important;
+    height: 195px;
+  }
+
+  #headshot{
+    width: 100px;
+    height: 100px;
+  }
+
+  #content{
+    position: relative;
+    top: 0px;
+    left: 0px !important;
+    height: 100%;
+    overflow: scroll;
+  }
+
+}
+
 .header{
   font-family: "Josefin Sans", sans-serif;
   margin-top: 3px;
@@ -34,7 +57,8 @@
 
 .theme{
   font-family: "Josefin Sans", sans-serif;
-  font-size: x-large;
+  font-size: xx-large;
+  padding: 5px;
   text-align: center;
 }
 

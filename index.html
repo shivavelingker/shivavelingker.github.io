@@ -38,7 +38,7 @@
 			ng-init="init()"
 			side="left"
 			width="220px">
-			<ons-page>
+			<ons-page ng-if="!isMobile()">
 				<!-- Name -->
 				<ons-row
 					class="menu-title"
@@ -84,6 +84,7 @@
 					style="min-height: 25%;">
 					<ons-col style="text-align: center;">
 						<img
+							id="headshot"
 							src="{{ headshot }}"
 							width="90%"/>
 					</ons-col>
@@ -125,9 +126,80 @@
 					</ons-col>
 				</ons-row>
 			</ons-page>
+			<ons-page ng-if="isMobile()">
+				<!-- Name and Image -->
+				<ons-row
+					class="menu-title"
+					style="height: 132px; padding: 5%;">
+					<ons-col>
+						<img
+							id="headshot"
+							src="{{ headshot }}"
+							width="90%"/>
+					</ons-col>
+					<ons-col>
+						Shiva M <br>
+						Velingker
+					</ons-col>
+				</ons-row>
+
+				<!-- Navigator -->
+				<ons-row
+					style="max-height: 25px; padding: 10px; text-align: center;">
+					<ons-col
+						style="padding-left: 5%;"
+						vertical-align="bottom">
+						<!-- <a id="about"
+							ng-click="about()">
+							about</a> /  -->
+						<a id="resume"
+							ng-click="resume()">
+							resume</a> / 
+						<a id="projects"
+							ng-click="projects()">
+							projects</a>
+					</ons-col>
+				</ons-row>
+
+				<!-- Contact -->
+				<ons-row style="height: 30px;">
+					<!-- GitHub -->
+					<ons-col
+						style="text-align: center;"
+						vertical-align="center">
+						<ons-icon
+							ng-click="gitHub()"
+							icon="ion-social-github"
+							size="2x">
+						</ons-icon>
+					</ons-col>
+
+					<!-- Phone -->
+					<ons-col
+						style="text-align: center;"
+						vertical-align="center">
+						<ons-icon
+							ng-click="phone()"
+							icon="ion-android-call"
+							size="2x">
+						</ons-icon>
+					</ons-col>
+
+					<!-- Email -->
+					<ons-col
+						style="text-align: center;"
+						vertical-align="center">
+						<ons-icon
+							ng-click="email()"
+							icon="ion-ios-email"
+							size="2x">
+						</ons-icon>
+					</ons-col>
+				</ons-row>
+			</ons-page>
 		</ons-splitter-side>
 
-		<ons-splitter-content>
+		<ons-splitter-content id="content">
 			<ons-navigator var="nav">
 				<ons-page></ons-page>
 			</ons-navigator>
