@@ -155,6 +155,7 @@ angular.module('app')
     prefs.projects = 1;
     angular.forEach(document.querySelectorAll('.reveal'), function(obj){
       obj.style.opacity = 1;
+      obj.style.pointerEvents = "auto";
     });
     angular.element(document.querySelector('.revealBtn')).attr("style", "display: none;");
   }

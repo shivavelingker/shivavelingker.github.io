@@ -11,6 +11,10 @@
     height: 195px;
   }
 
+  .quote{
+    display: none;
+  }
+
   #headshot{
     width: 100px;
     height: 100px;
@@ -35,6 +39,7 @@
 
 .reveal{
   opacity: 0;
+  pointer-events: none;
   transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
@@ -183,15 +188,6 @@ ons-splitter-side[side="left"] {
 #tabbarPage .list {
   background-color: grey;
   overflow-x: hidden;
-}
-
-.list__item {
-  min-height: 0;
-  height: 44px;
-}
-
-.list__item--material {
-  height: 56px;
 }
 
 .hide-children * {
