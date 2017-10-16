@@ -2,7 +2,7 @@ var url = "https://dl.dropbox.com/s/gtjkjehn28dsfoz/portfolio.json?dl=1";
 var data = null;
 
 var prefs = {
-  projects: 0
+  projects: 1
 };
 
 //Get all content externally from Dropbox

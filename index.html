@@ -23,8 +23,6 @@
 	<link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
 	<link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/col.css">
-	<link rel="stylesheet" href="css/3cols.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600|Love+Ya+Like+A+Sister|Open+Sans:300|Poiret+One" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
@@ -38,7 +36,7 @@
 			ng-init="init()"
 			side="left"
 			width="220px">
-			<ons-page ng-if="!isMobile()">
+			<ons-page ng-if="!isMobile()" style="overflow: hidden !important;">
 				<!-- Name -->
 				<ons-row
 					class="menu-title"
@@ -87,7 +85,7 @@
 				</ons-row>
 
 				<!-- Contact -->
-				<ons-row style="min-height: 10%;">
+				<ons-row>
 					<!-- GitHub -->
 					<ons-col
 						style="text-align: center;"

@@ -81,6 +81,14 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.projectImg{
+  margin: 5px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1em;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+}
+
 
 .button--silent{
   background-color: transparent;
